@@ -1,0 +1,39 @@
+{
+  "name": "Chores-App",
+  "version": "0.0.1",
+  "description": "Web App built to keep track/plan house chores",
+  "main": "public/js/app.js",
+  "scripts": {
+    "watch": "watchify app.js -o public/js/bundle.js -v",
+    "browserify": "browserify app.js | uglifyjs > public/js/bundle.js",
+    "build": "npm run browserify ",
+    "start": "npm run watch & nodemon server.js"
+  },
+  "author": "Michael Vander Lugt",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~4.9.7",
+    "mongoose": "^3.8.17",
+    "node-jsx": "~0.11.0",
+    "react": "~0.11.2",
+    "socket.io": "^1.1.0",
+    "object-assign": "^1.0.0",
+    "morgan": "~1.2.2",
+    "method-override": "~2.1.2",
+    "body-parser": "~1.5.2",
+    "es6-promise": "^2.0.1",
+    "superagent": "^0.21.0"
+  },
+  "devDependencies": {
+    "browserify": "~6.0.3",
+    "nodemon": "^1.2.1",
+    "reactify": "~0.14.0",
+    "uglify-js": "~2.4.15",
+    "watchify": "~2.0.0"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  }
+}

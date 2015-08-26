@@ -1,0 +1,1 @@
+console.error("Error: Cannot find module '/Users/mvlugt/Desktop/Chores App/app.js' from '/Users/mvlugt/Desktop/Chores App'")
